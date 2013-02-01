@@ -1,0 +1,23 @@
+{
+    "name": "europaphp/module-help",
+    "description": "Main module dependency for some other modules.",
+    "keywords": ["cli", "help", "man"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trey Shugart",
+            "email": "treshugart@gmail.com",
+            "homepage": "http://iamtres.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Bootstrapper": "src",
+            "Controller": "src"
+        }
+    },
+    "require": {
+        "europaphp/europaphp": "2.2.*"
+    }
+}
