@@ -1,7 +1,7 @@
 {
-    "name": "europaphp/module-help",
+    "name": "europaphp/module-main",
     "description": "Main module dependency for some other modules.",
-    "keywords": ["cli", "help", "man"],
+    "keywords": ["default", "main"],
     "license": "MIT",
     "authors": [
         {
