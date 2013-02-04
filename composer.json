@@ -13,11 +13,10 @@
     ],
     "autoload": {
         "psr-0": {
-            "Bootstrapper": "src",
-            "Controller": "src"
+            "": "src"
         }
     },
     "require": {
-        "europaphp/europaphp": "2.2.*"
+        "europaphp/europaphp": "2.2.x-dev"
     }
 }
