@@ -1,1 +1,1 @@
-<?php $this->extend('web') ?>
+<?php $this->extend('web.php') ?>
