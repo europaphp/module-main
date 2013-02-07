@@ -15,8 +15,5 @@
         "psr-0": {
             "": "src"
         }
-    },
-    "require": {
-        "europaphp/europaphp": "2.2.x-dev"
     }
 }
