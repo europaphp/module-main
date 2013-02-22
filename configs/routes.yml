@@ -1,3 +1,8 @@
-index:
+index-web:
   pattern: (?<action>GET) (index)?
-  controller: index
+  controller: europaphp/main/controller/index
+
+index-cli:
+  pattern: index
+  controller: europaphp/main/controller/index
+  action: cli

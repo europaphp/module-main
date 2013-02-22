@@ -1,0 +1,1 @@
+<?php $this->extend('europaphp/main/layout/cli.php'); ?>
