@@ -3,15 +3,12 @@
 namespace Europaphp\Main\Controller;
 use Europa\Controller\ControllerAbstract;
 
-class Index extends ControllerAbstract
+class Modules extends ControllerAbstract
 {
     public function cli()
     {
-        
-    }
-
-    public function get()
-    {
-
+        return [
+            'modules' => $this->service('modules')
+        ];
     }
 }
