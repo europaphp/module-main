@@ -8,12 +8,12 @@
         "controller": "europaphp/main/controller/index",
         "action": "cli"
     },
-    "europaphp.main.index-cli": {
+    "europaphp.main.module-cli": {
         "pattern": "module",
         "controller": "europaphp/main/controller/module",
         "action": "cli"
     },
-    "europaphp.main.index-cli": {
+    "europaphp.main.modules-cli": {
         "pattern": "modules",
         "controller": "europaphp/main/controller/modules",
         "action": "cli"

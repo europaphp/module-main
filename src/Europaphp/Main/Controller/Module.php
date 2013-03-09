@@ -5,7 +5,7 @@ use Europa\Controller\ControllerAbstract;
 
 class Module extends ControllerAbstract
 {
-    public function cli($name, $config = 'yml')
+    public function cli($name, $config = 'json')
     {
         return [
             'config' => $config,
