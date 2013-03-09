@@ -8,6 +8,7 @@ class Main extends ModuleAbstract
     const VERSION = '0.1.0';
 
     protected $config = [
-        'debug' => true
+        'debug'    => true,
+        'timezone' => 'Australia/Sydney'
     ];
 }
