@@ -1,21 +1,13 @@
-{
-    "europaphp.main.index-web": {
-        "pattern": "(?<action>GET) (index)?",
-        "controller": "europaphp/main/controller/index"
-    },
-    "europaphp.main.index-cli": {
-        "pattern": "(index)?",
-        "controller": "europaphp/main/controller/index",
-        "action": "cli"
-    },
-    "europaphp.main.module-cli": {
-        "pattern": "module",
-        "controller": "europaphp/main/controller/module",
-        "action": "cli"
-    },
-    "europaphp.main.modules-cli": {
-        "pattern": "modules",
-        "controller": "europaphp/main/controller/modules",
-        "action": "cli"
-    }
-}
+[{
+    "when": "GET (index)?",
+    "call": "Europaphp\\Main\\Controller\\Index->get"
+}, {
+    "when": "(index)?",
+    "call": "Europaphp\\Main\\Controller\\Index->cli"
+}, {
+    "when": "module",
+    "call": "Europaphp\\Main\\Controller\\Module->cli"
+}, {
+    "when": "modules",
+    "call": "Europaphp\\Main\\Controller\\Modules->cli"
+}]
