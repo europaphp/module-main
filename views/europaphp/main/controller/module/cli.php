@@ -1,6 +1,6 @@
 <?php
 
-$this->extend('Europaphp\Main\Layout\cli');
+$this->extend('europaphp\main\layout\cli');
 
 $module = $this->context('module');
 $helper = $this->helper('cli');

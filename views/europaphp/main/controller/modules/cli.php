@@ -1,4 +1,4 @@
-<?php $this->extend('Europaphp\Main\Layout\cli'); ?>
+<?php $this->extend('europaphp\main\layout\cli'); ?>
 
 <?php foreach ($this->context('modules') as $module): ?>
 - <?php echo $this->helper('cli')->color($module['name'], 'green')

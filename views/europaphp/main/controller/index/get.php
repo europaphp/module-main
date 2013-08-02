@@ -1,1 +1,1 @@
-<?php $this->extend('Europaphp\Main\Layout\web'); ?>
+<?php $this->extend('europaphp\main\layout\web'); ?>
