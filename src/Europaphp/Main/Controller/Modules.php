@@ -9,7 +9,7 @@ class Modules
 
   public function __construct($modules)
   {
-    $this->modules = $modules;
+  $this->modules = $modules;
   }
 
   /**
@@ -19,18 +19,18 @@ class Modules
    */
   public function cli()
   {
-    $modules = [];
+  $modules = [];
 
-    foreach ($this->modules as $module) {
-      $modules[] = [
-        'name' => $module->name(),
-        'version' => $module->version(),
-        'description' => (new Reflection\ClassReflector($module))->getDocBlock()->getDescription()
-      ];
-    }
-
-    return [
-      'modules' => $modules
+  foreach ($this->modules as $module) {
+    $modules[] = [
+    'name' => $module->name(),
+    'version' => $module->version(),
+    'description' => (new Reflection\ClassReflector($module))->getDocBlock()->getDescription()
     ];
+  }
+
+  return [
+    'modules' => $modules
+  ];
   }
 }

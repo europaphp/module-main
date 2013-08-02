@@ -9,7 +9,7 @@ class Module
 
   public function __construct($modules)
   {
-    $this->modules = $modules;
+  $this->modules = $modules;
   }
 
   /**
@@ -22,21 +22,21 @@ class Module
    */
   public function cli($name, $config = 'json')
   {
-    $module = $this->modules->get($name);
-    $config = 'Europa\Config\Adapter\To\\' . ucfirst($config);
-    $config = $module->config()->export(new $config(JSON_PRETTY_PRINT));
-    $config = explode(PHP_EOL, $config);
+  $module = $this->modules->get($name);
+  $config = 'Europa\Config\Adapter\To\\' . ucfirst($config);
+  $config = $module->config()->export(new $config(JSON_PRETTY_PRINT));
+  $config = explode(PHP_EOL, $config);
 
-    return [
-      'module' => [
-        'name' => $module->name(),
-        'description' => (new Reflection\ClassReflector($module))->getDocBlock()->getDescription(),
-        'version' => $module->version(),
-        'namespace' => $module->ns(),
-        'path' => $module->path(),
-        'dependencies' => $module->dependencies(),
-        'config' => $config
-      ]
-    ];
+  return [
+    'module' => [
+    'name' => $module->name(),
+    'description' => (new Reflection\ClassReflector($module))->getDocBlock()->getDescription(),
+    'version' => $module->version(),
+    'namespace' => $module->ns(),
+    'path' => $module->path(),
+    'dependencies' => $module->dependencies(),
+    'config' => $config
+    ]
+  ];
   }
 }

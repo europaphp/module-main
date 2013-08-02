@@ -17,24 +17,24 @@ echo $module['description']
 
 echo $helper->color('  Version:', 'yellow') . ' ' . $module['version'] . PHP_EOL;
 echo $helper->color('Namespace:', 'yellow') . ' ' . $module['namespace'] . PHP_EOL;
-echo $helper->color('     Path:', 'yellow') . ' ' . $module['path'] . PHP_EOL;
+echo $helper->color('   Path:', 'yellow') . ' ' . $module['path'] . PHP_EOL;
 echo PHP_EOL;
 
 if ($module['dependencies']) {
-    echo $helper->color('Dependencies', 'cyan') . PHP_EOL;
-    echo $helper->color('------------', 'cyan') . PHP_EOL;
-    echo PHP_EOL;
+  echo $helper->color('Dependencies', 'cyan') . PHP_EOL;
+  echo $helper->color('------------', 'cyan') . PHP_EOL;
+  echo PHP_EOL;
 
-    foreach ($module['dependencies'] as $name => $version) {
-        echo '- ' . $helper->color($name, 'green') . ' ' . $helper->color($version, 'yellow') . PHP_EOL;
-    }
+  foreach ($module['dependencies'] as $name => $version) {
+    echo '- ' . $helper->color($name, 'green') . ' ' . $helper->color($version, 'yellow') . PHP_EOL;
+  }
 
-    echo PHP_EOL;
+  echo PHP_EOL;
 }
 
 if ($module['config']) {
-    echo $helper->color('Configuration', 'cyan') . PHP_EOL;
-    echo $helper->color('-------------', 'cyan') . PHP_EOL;
-    echo PHP_EOL;
-    echo implode(PHP_EOL, $module['config']);
+  echo $helper->color('Configuration', 'cyan') . PHP_EOL;
+  echo $helper->color('-------------', 'cyan') . PHP_EOL;
+  echo PHP_EOL;
+  echo implode(PHP_EOL, $module['config']);
 }
