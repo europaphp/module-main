@@ -23,9 +23,9 @@ class Modules
   
     foreach ($this->modules as $module) {
       $modules[] = [
-      'name' => $module->name(),
-      'version' => $module->version(),
-      'description' => (new Reflection\ClassReflector($module))->getDocBlock()->getDescription()
+        'name' => $module->name(),
+        'version' => $module->version(),
+        'description' => (new Reflection\ClassReflector($module))->getDocBlock()->getDescription()
       ];
     }
   
