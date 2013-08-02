@@ -1,14 +1,26 @@
 <?php
 
 namespace Europaphp;
-use Europa\Module\ModuleAbstract;
 
-class Main extends ModuleAbstract
+class Main extends \Europa\Module\ModuleAbstract
 {
     const VERSION = '0.1.0';
 
     protected $config = [
         'debug'    => true,
         'timezone' => 'Australia/Sydney'
+    ];
+
+    protected $routes = [
+        [
+            'when' => 'GET (index)?',
+            'call' => 'Europaphp\\Main\\Controller\\Index->get'
+        ], [
+            'when' => 'CLI module',
+            'call' => 'Europaphp\\Main\\Controller\\Module->cli'
+        ], [
+            'when' => 'CLI modules',
+            'call' => 'Europaphp\\Main\\Controller\\Modules->cli'
+        ]
     ];
 }

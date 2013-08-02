@@ -1,17 +1,11 @@
 <?php
 
 namespace Europaphp\Main\Controller;
-use Europa\Controller\ControllerAbstract;
 
-class Index extends ControllerAbstract
+class Index
 {
-    public function cli()
-    {
-        
-    }
+  public function get()
+  {
 
-    public function get()
-    {
-
-    }
+  }
 }

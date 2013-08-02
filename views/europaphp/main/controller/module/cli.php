@@ -1,35 +1,40 @@
 <?php
 
-$this->extend('europaphp/main/layout/cli.php');
+$this->extend('Europaphp\Main\Layout\cli');
 
 $module = $this->context('module');
 $helper = $this->helper('cli');
 
-echo $helper->color('     Name:', 'yellow') . ' ' . $helper->color($module->name(), 'green') . PHP_EOL;
-echo $helper->color('  Version:', 'yellow') . ' ' . $helper->color($module->version(), 'yellow') . PHP_EOL;
-echo $helper->color('Namespace:', 'yellow') . ' ' . $module->ns() . PHP_EOL;
-echo $helper->color('     Path:', 'yellow') . ' ' . $module->path() . PHP_EOL;
+echo $helper->color($module['name'], 'cyan')
+  . PHP_EOL
+  . $helper->color(str_repeat('-', strlen($module['name'])), 'cyan')
+  . PHP_EOL
+  . PHP_EOL;
+
+echo $module['description']
+  . PHP_EOL
+  . PHP_EOL;
+
+echo $helper->color('  Version:', 'yellow') . ' ' . $module['version'] . PHP_EOL;
+echo $helper->color('Namespace:', 'yellow') . ' ' . $module['namespace'] . PHP_EOL;
+echo $helper->color('     Path:', 'yellow') . ' ' . $module['path'] . PHP_EOL;
 echo PHP_EOL;
 
-if ($dependencies = $module->dependencies()) {
+if ($module['dependencies']) {
     echo $helper->color('Dependencies', 'cyan') . PHP_EOL;
     echo $helper->color('------------', 'cyan') . PHP_EOL;
     echo PHP_EOL;
 
-    foreach ($dependencies as $name => $version) {
+    foreach ($module['dependencies'] as $name => $version) {
         echo '- ' . $helper->color($name, 'green') . ' ' . $helper->color($version, 'yellow') . PHP_EOL;
     }
 
     echo PHP_EOL;
 }
 
-$config = 'Europa\Config\Adapter\To\\' . ucfirst($this->context('config'));
-$config = $module->config()->export(new $config(JSON_PRETTY_PRINT));
-$config = explode(PHP_EOL, $config);
-
-if ($config) {
+if ($module['config']) {
     echo $helper->color('Configuration', 'cyan') . PHP_EOL;
     echo $helper->color('-------------', 'cyan') . PHP_EOL;
     echo PHP_EOL;
-    echo implode(PHP_EOL, $config);
+    echo implode(PHP_EOL, $module['config']);
 }
