@@ -34,7 +34,7 @@ class Configuration extends Di\ConfigurationAbstract
 
     public function controllerCaller(callable $container)
     {
-        $caller = new App\ControllerCaller();
+        $caller = new App\ControllerCaller;
         $caller->setContainer($container);
         $caller->setRequest($container('request'));
         return $caller;
@@ -42,7 +42,7 @@ class Configuration extends Di\ConfigurationAbstract
 
     public function controllerResolver(callable $container)
     {
-        $resolver = new App\ControllerResolver();
+        $resolver = new App\ControllerResolver;
         $resolver->setContainer($container);
         return $resolver;
     }
