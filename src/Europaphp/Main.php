@@ -2,6 +2,10 @@
 
 namespace Europaphp;
 
+/**
+ * Provides the configuration for a default DI Container as well as some
+ * default classes for easily configuring module bootstrappers.
+ */
 class Main extends \Europa\Module\ModuleAbstract
 {
   const VERSION = '0.1.0';
