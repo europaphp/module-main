@@ -3,7 +3,6 @@
 namespace Europaphp\Main\Di;
 use Europa\App;
 use Europa\Di;
-use Europa\Event;
 use Europa\Fs;
 use Europa\Module;
 use Europa\Request;

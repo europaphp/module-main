@@ -1,19 +1,32 @@
 {
-    "name": "europaphp/module-main",
-    "description": "Main module dependency for some other modules.",
-    "keywords": ["default", "main"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Trey Shugart",
-            "email": "treshugart@gmail.com",
-            "homepage": "http://iamtres.com",
-            "role": "Lead Developer"
-        }
-    ],
-    "autoload": {
-        "psr-0": {
-            "": "src"
-        }
+  "name": "europaphp/module-main",
+  "description": "Module that adds convetion and functionality to EuorpaPHP apps.",
+  "keywords": ["cli", "help", "man"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Trey Shugart",
+      "email": "treshugart@gmail.com",
+      "homepage": "http://iamtres.com",
+      "role": "Lead Developer"
     }
+  ],
+  "autoload": {
+    "psr-0": {
+      "": "src"
+    }
+  },
+  "require": {
+    "europaphp/app": "dev-master",
+    "europaphp/bootstrapper": "dev-master",
+    "europaphp/di": "dev-master",
+    "europaphp/fs": "dev-master",
+    "europaphp/module": "dev-master",
+    "europaphp/reflection": "dev-master",
+    "europaphp/request": "dev-master",
+    "europaphp/response": "dev-master",
+    "europaphp/router": "dev-master",
+    "europaphp/view": "dev-master",
+    "europaphp/module-main": "dev-master"
+  }
 }
