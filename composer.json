@@ -26,7 +26,6 @@
     "europaphp/request": "dev-master",
     "europaphp/response": "dev-master",
     "europaphp/router": "dev-master",
-    "europaphp/view": "dev-master",
-    "europaphp/module-main": "dev-master"
+    "europaphp/view": "dev-master"
   }
 }
