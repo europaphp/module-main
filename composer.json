@@ -17,15 +17,15 @@
     }
   },
   "require": {
-    "europaphp/app": "dev-master",
-    "europaphp/bootstrapper": "dev-master",
-    "europaphp/di": "dev-master",
-    "europaphp/fs": "dev-master",
-    "europaphp/module": "dev-master",
-    "europaphp/reflection": "dev-master",
-    "europaphp/request": "dev-master",
-    "europaphp/response": "dev-master",
-    "europaphp/router": "dev-master",
-    "europaphp/view": "dev-master"
+    "europaphp/component-app": "dev-master",
+    "europaphp/component-bootstrapper": "dev-master",
+    "europaphp/component-di": "dev-master",
+    "europaphp/component-fs": "dev-master",
+    "europaphp/component-module": "dev-master",
+    "europaphp/component-reflection": "dev-master",
+    "europaphp/component-request": "dev-master",
+    "europaphp/component-response": "dev-master",
+    "europaphp/component-router": "dev-master",
+    "europaphp/component-view": "dev-master"
   }
 }
