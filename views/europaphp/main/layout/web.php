@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <?php echo $this->helper('css')->compile('css/lib/bootstrap'); ?>
-    <?php echo $this->helper('css')->compile('css/lib/bootstrap-responsive'); ?>
+    <?php echo $this->helper('css')->compile('assets/css/lib/bootstrap'); ?>
+    <?php echo $this->helper('css')->compile('assets/css/lib/bootstrap-responsive'); ?>
     <title>EuropaPHP</title>
   </head>
   <body>

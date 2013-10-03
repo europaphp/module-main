@@ -17,7 +17,8 @@ echo $module['description']
 
 echo $helper->color('  Version:', 'yellow') . ' ' . $module['version'] . PHP_EOL;
 echo $helper->color('Namespace:', 'yellow') . ' ' . $module['namespace'] . PHP_EOL;
-echo $helper->color('   Path:', 'yellow') . ' ' . $module['path'] . PHP_EOL;
+echo $helper->color('     Path:', 'yellow') . ' ' . $module['path'] . PHP_EOL;
+echo $helper->color('Installed:', 'yellow') . ' ' . ($module['installed'] ? $this->helper('cli')->color('yup', 'green') : $this->helper('cli')->color('nup', 'red')) . PHP_EOL;
 echo PHP_EOL;
 
 if ($module['dependencies']) {
@@ -36,5 +37,17 @@ if ($module['config']) {
   echo $helper->color('Configuration', 'cyan') . PHP_EOL;
   echo $helper->color('-------------', 'cyan') . PHP_EOL;
   echo PHP_EOL;
-  echo implode(PHP_EOL, $module['config']);
+  echo trim(implode(PHP_EOL, $module['config']));
+  echo PHP_EOL;
+  echo PHP_EOL;
+}
+
+if ($module['assets']) {
+  echo $helper->color('Assets', 'cyan') . PHP_EOL;
+  echo $helper->color('------', 'cyan') . PHP_EOL;
+  echo PHP_EOL;
+
+  foreach ($module['assets'] as $asset) {
+    echo $asset . PHP_EOL;
+  }
 }
